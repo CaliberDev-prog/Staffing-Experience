@@ -6,8 +6,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #0a0a0f;
-    color: #ffffff;
+    background: #0a0d1a;
+    color: #e8e5dc;
     min-height: 100vh;
     line-height: 1.6;
     overflow-x: hidden;
@@ -30,16 +30,16 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: rgba(10, 10, 15, 0.9);
+    background: rgba(10, 13, 26, 0.9);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+    border-bottom: 1px solid rgba(232, 229, 220, 0.1);
 }
 
 .nav-logo {
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 0.1em;
-    color: #8b5cf6;
+    color: #d4c5a0;
 }
 
 .nav-links {
@@ -49,7 +49,7 @@ body {
 }
 
 .nav-links a {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(232, 229, 220, 0.5);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 300;
@@ -58,7 +58,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #8b5cf6;
+    color: #d4c5a0;
 }
 
 /* Hero Section */
@@ -81,7 +81,7 @@ body {
     transform: translateX(-50%);
     width: 1px;
     height: 100%;
-    background: linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.3), transparent);
+    background: linear-gradient(to bottom, transparent, rgba(232, 229, 220, 0.15), transparent);
 }
 
 .hero::after {
@@ -92,7 +92,7 @@ body {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(212, 197, 160, 0.08) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -103,7 +103,7 @@ body {
     margin-bottom: 30px;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
-    background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
+    background: linear-gradient(135deg, #e8e5dc 0%, #c9b896 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -113,7 +113,7 @@ body {
 
 .hero .subtitle {
     font-size: clamp(1rem, 2vw, 1.5rem);
-    color: rgba(139, 92, 246, 0.7);
+    color: rgba(212, 197, 160, 0.6);
     font-weight: 300;
     letter-spacing: 0.05em;
     opacity: 0;
@@ -129,7 +129,7 @@ body {
     transform: translateX(-50%);
     width: 1px;
     height: 80px;
-    background: linear-gradient(to bottom, rgba(139, 92, 246, 0.6), transparent);
+    background: linear-gradient(to bottom, rgba(212, 197, 160, 0.4), transparent);
     opacity: 0;
     animation: fadeInUp 1s ease 0.4s forwards, float 3s ease-in-out infinite;
 }
@@ -138,7 +138,7 @@ body {
 .about {
     padding: 150px 0;
     position: relative;
-    background: linear-gradient(to bottom, rgba(139, 92, 246, 0.02) 0%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(212, 197, 160, 0.02) 0%, transparent 100%);
 }
 
 .about-content {
@@ -153,7 +153,7 @@ body {
     font-weight: 300;
     margin-bottom: 30px;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #ffffff 0%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #e8e5dc 0%, #d4c5a0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -162,7 +162,7 @@ body {
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.9;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(232, 229, 220, 0.65);
     margin-bottom: 20px;
     font-weight: 300;
 }
@@ -175,28 +175,28 @@ body {
 
 .stat {
     padding: 30px;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(232, 229, 220, 0.15);
     border-radius: 10px;
-    background: rgba(139, 92, 246, 0.03);
+    background: rgba(212, 197, 160, 0.03);
     transition: all 0.3s ease;
 }
 
 .stat:hover {
-    border-color: rgba(139, 92, 246, 0.5);
+    border-color: rgba(212, 197, 160, 0.35);
     transform: translateY(-5px);
-    background: rgba(139, 92, 246, 0.08);
+    background: rgba(212, 197, 160, 0.06);
 }
 
 .stat-number {
     font-size: 2.5rem;
     font-weight: 300;
-    color: #8b5cf6;
+    color: #d4c5a0;
     margin-bottom: 10px;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(232, 229, 220, 0.45);
     letter-spacing: 0.05em;
     font-weight: 300;
 }
@@ -227,7 +227,7 @@ body {
     gap: 80px;
     align-items: center;
     padding: 60px 0;
-    border-top: 1px solid rgba(139, 92, 246, 0.1);
+    border-top: 1px solid rgba(232, 229, 220, 0.08);
 }
 
 .project:nth-child(even) {
@@ -244,7 +244,7 @@ body {
 
 .project-number {
     font-size: 0.9rem;
-    color: rgba(139, 92, 246, 0.6);
+    color: rgba(212, 197, 160, 0.5);
     letter-spacing: 0.2em;
     margin-bottom: 20px;
     font-weight: 300;
@@ -292,21 +292,21 @@ body {
 }
 
 .skill-level.advanced {
-    background: rgba(139, 92, 246, 0.15);
-    color: #8b5cf6;
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    background: rgba(212, 197, 160, 0.15);
+    color: #d4c5a0;
+    border: 1px solid rgba(212, 197, 160, 0.3);
 }
 
 .skill-level.expert {
-    background: rgba(168, 85, 247, 0.15);
-    color: #a855f7;
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    background: rgba(201, 184, 150, 0.15);
+    color: #c9b896;
+    border: 1px solid rgba(201, 184, 150, 0.3);
 }
 
 .project-description {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(232, 229, 220, 0.55);
     margin-bottom: 35px;
     font-weight: 300;
 }
@@ -320,27 +320,27 @@ body {
 
 .tag {
     padding: 8px 20px;
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    border: 1px solid rgba(212, 197, 160, 0.25);
     border-radius: 30px;
     font-size: 0.85rem;
-    color: rgba(139, 92, 246, 0.8);
+    color: rgba(212, 197, 160, 0.75);
     transition: all 0.3s ease;
     font-weight: 300;
     letter-spacing: 0.02em;
 }
 
 .tag:hover {
-    border-color: rgba(139, 92, 246, 0.6);
-    color: #8b5cf6;
+    border-color: rgba(212, 197, 160, 0.5);
+    color: #d4c5a0;
     transform: translateY(-2px);
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(212, 197, 160, 0.08);
 }
 
 .project-image {
     position: relative;
     aspect-ratio: 4/3;
-    background: rgba(139, 92, 246, 0.03);
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    background: rgba(212, 197, 160, 0.03);
+    border: 1px solid rgba(232, 229, 220, 0.15);
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
@@ -350,7 +350,7 @@ body {
 }
 
 .project-image:hover {
-    border-color: rgba(139, 92, 246, 0.5);
+    border-color: rgba(212, 197, 160, 0.4);
     transform: scale(1.02);
 }
 
@@ -358,7 +358,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(212, 197, 160, 0.08) 0%, transparent 100%);
     opacity: 0;
     transition: opacity 0.6s ease;
 }
@@ -369,7 +369,7 @@ body {
 
 .placeholder-text {
     font-size: 1.5rem;
-    color: rgba(139, 92, 246, 0.5);
+    color: rgba(212, 197, 160, 0.4);
     font-weight: 300;
     letter-spacing: 0.05em;
     z-index: 1;
@@ -379,8 +379,8 @@ body {
 .positions {
     padding: 150px 0;
     position: relative;
-    border-top: 1px solid rgba(139, 92, 246, 0.1);
-    background: #0a0a0f;
+    border-top: 1px solid rgba(232, 229, 220, 0.08);
+    background: #0a0d1a;
 }
 
 .positions-grid {
@@ -392,9 +392,9 @@ body {
 
 .position-card {
     padding: 35px 30px;
-    border: 1px solid rgba(139, 92, 246, 0.25);
+    border: 1px solid rgba(232, 229, 220, 0.15);
     border-radius: 10px;
-    background: rgba(10, 10, 15, 0.6);
+    background: rgba(10, 13, 26, 0.6);
     backdrop-filter: blur(10px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -408,16 +408,16 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(212, 197, 160, 0.4), transparent);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
 
 .position-card:hover {
-    border-color: rgba(139, 92, 246, 0.6);
+    border-color: rgba(212, 197, 160, 0.4);
     transform: translateY(-8px);
-    background: rgba(139, 92, 246, 0.08);
-    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
+    background: rgba(212, 197, 160, 0.06);
+    box-shadow: 0 10px 40px rgba(212, 197, 160, 0.15);
 }
 
 .position-card:hover::before {
@@ -425,13 +425,13 @@ body {
 }
 
 .position-card.current {
-    border-color: rgba(139, 92, 246, 0.45);
-    background: rgba(139, 92, 246, 0.06);
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+    border-color: rgba(212, 197, 160, 0.3);
+    background: rgba(212, 197, 160, 0.05);
+    box-shadow: 0 0 20px rgba(212, 197, 160, 0.1);
 }
 
 .position-card.irl {
-    border-color: rgba(167, 139, 250, 0.3);
+    border-color: rgba(201, 184, 150, 0.25);
 }
 
 .position-header {
@@ -445,7 +445,7 @@ body {
 .position-card h3 {
     font-size: 1.5rem;
     font-weight: 400;
-    color: #ffffff;
+    color: #e8e5dc;
     letter-spacing: -0.01em;
 }
 
@@ -479,7 +479,7 @@ body {
 
 .position-role {
     font-size: 1.1rem;
-    color: rgba(139, 92, 246, 0.9);
+    color: rgba(212, 197, 160, 0.85);
     font-weight: 400;
     margin-bottom: 10px;
 }
@@ -491,19 +491,17 @@ body {
     font-weight: 300;
 }
 
-
-
 .position-description {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(232, 229, 220, 0.55);
     font-weight: 300;
 }
 
 /* Extra Info Section */
 .extra-info {
     padding: 150px 0;
-    border-top: 1px solid rgba(139, 92, 246, 0.1);
+    border-top: 1px solid rgba(232, 229, 220, 0.08);
 }
 
 .info-grid {
@@ -515,9 +513,9 @@ body {
 
 .info-card {
     padding: 50px 40px;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(232, 229, 220, 0.15);
     border-radius: 10px;
-    background: rgba(139, 92, 246, 0.02);
+    background: rgba(212, 197, 160, 0.02);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -530,16 +528,16 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+    background: linear-gradient(90deg, #d4c5a0, #c9b896);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s ease;
 }
 
 .info-card:hover {
-    border-color: rgba(139, 92, 246, 0.5);
+    border-color: rgba(212, 197, 160, 0.4);
     transform: translateY(-10px);
-    background: rgba(139, 92, 246, 0.05);
+    background: rgba(212, 197, 160, 0.05);
 }
 
 .info-card:hover::before {
@@ -555,13 +553,13 @@ body {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #e8e5dc;
 }
 
 .info-card p {
     font-size: 1rem;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(232, 229, 220, 0.55);
     font-weight: 300;
 }
 
@@ -573,9 +571,9 @@ body {
 
 .info-card li {
     padding: 10px 0;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(232, 229, 220, 0.55);
     font-size: 0.95rem;
-    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+    border-bottom: 1px solid rgba(232, 229, 220, 0.08);
 }
 
 .info-card li:last-child {
@@ -584,7 +582,7 @@ body {
 
 .info-card li::before {
     content: '▸';
-    color: #8b5cf6;
+    color: #d4c5a0;
     margin-right: 10px;
 }
 
@@ -592,7 +590,7 @@ body {
 .values-section {
     margin-top: 120px;
     padding-top: 80px;
-    border-top: 1px solid rgba(139, 92, 246, 0.1);
+    border-top: 1px solid rgba(232, 229, 220, 0.08);
 }
 
 .values-grid {
@@ -604,16 +602,16 @@ body {
 
 .value-card {
     padding: 40px 35px;
-    border: 1px solid rgba(139, 92, 246, 0.15);
+    border: 1px solid rgba(232, 229, 220, 0.12);
     border-radius: 12px;
-    background: rgba(139, 92, 246, 0.02);
+    background: rgba(212, 197, 160, 0.02);
     transition: all 0.4s ease;
 }
 
 .value-card:hover {
-    border-color: rgba(139, 92, 246, 0.4);
+    border-color: rgba(212, 197, 160, 0.35);
     transform: translateY(-5px);
-    background: rgba(139, 92, 246, 0.05);
+    background: rgba(212, 197, 160, 0.05);
 }
 
 .value-icon {
@@ -625,13 +623,13 @@ body {
     font-size: 1.3rem;
     font-weight: 400;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #e8e5dc;
 }
 
 .value-card p {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(232, 229, 220, 0.6);
     font-weight: 300;
 }
 
@@ -639,7 +637,7 @@ body {
 .personal-info {
     margin-top: 120px;
     padding-top: 80px;
-    border-top: 1px solid rgba(139, 92, 246, 0.1);
+    border-top: 1px solid rgba(232, 229, 220, 0.08);
 }
 
 .info-details {
@@ -653,23 +651,23 @@ body {
 .detail-item {
     display: flex;
     padding: 25px 35px;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(232, 229, 220, 0.15);
     border-radius: 10px;
-    background: rgba(139, 92, 246, 0.02);
+    background: rgba(212, 197, 160, 0.02);
     transition: all 0.3s ease;
     gap: 20px;
     align-items: flex-start;
 }
 
 .detail-item:hover {
-    border-color: rgba(139, 92, 246, 0.4);
-    background: rgba(139, 92, 246, 0.05);
+    border-color: rgba(212, 197, 160, 0.35);
+    background: rgba(212, 197, 160, 0.05);
     transform: translateX(5px);
 }
 
 .detail-label {
     font-size: 1rem;
-    color: rgba(139, 92, 246, 0.9);
+    color: rgba(212, 197, 160, 0.85);
     font-weight: 500;
     min-width: 180px;
     letter-spacing: 0.02em;
@@ -677,7 +675,7 @@ body {
 
 .detail-value {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(232, 229, 220, 0.65);
     font-weight: 300;
     line-height: 1.6;
     flex: 1;
@@ -687,9 +685,9 @@ body {
 footer {
     text-align: center;
     padding: 50px 20px;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(232, 229, 220, 0.3);
     margin-top: 100px;
-    border-top: 1px solid rgba(139, 92, 246, 0.05);
+    border-top: 1px solid rgba(232, 229, 220, 0.05);
 }
 
 footer p {
