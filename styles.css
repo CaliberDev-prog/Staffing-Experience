@@ -109,13 +109,9 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, 
-        transparent 0%, 
-        rgba(232, 212, 168, 0.15) 20%, 
-        rgba(232, 212, 168, 0.15) 80%, 
-        transparent 100%);
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 
 .hero::after {
@@ -145,7 +141,7 @@ body {
 .hero h1 {
     font-size: clamp(4rem, 10vw, 9rem);
     font-weight: 200;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
     margin-bottom: 32px;
     opacity: 0;
     animation: fadeInUp 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -155,8 +151,8 @@ body {
     background-clip: text;
     position: relative;
     z-index: 1;
-    line-height: 1.05;
-    text-shadow: 0 0 80px rgba(232, 212, 168, 0.3);
+    line-height: 1.1;
+    word-spacing: 0.05em;
 }
 
 .hero .subtitle {
