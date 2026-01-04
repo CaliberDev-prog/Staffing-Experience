@@ -1004,6 +1004,36 @@ footer p {
     }
 }
 
+@media (max-width: 640px) {
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+
+    .stat {
+        padding: 36px 28px;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+    }
+
+    .project-tags, .tag {
+        font-size: 0.75rem;
+    }
+
+    .info-card, .value-card {
+        padding: 44px 36px;
+    }
+}
+
+/* ============================================ */
+/* REVIEWS SECTION - ADD TO BOTTOM OF FILE */
+/* ============================================ */
+
 .reviews {
     padding: 160px 0;
     border-top: 1px solid rgba(232, 229, 220, 0.06);
@@ -1318,8 +1348,12 @@ footer p {
     font-size: 0.95rem;
 }
 
-/* Responsive */
+/* Responsive for Reviews */
 @media (max-width: 768px) {
+    .reviews {
+        padding: 120px 0;
+    }
+
     .review-form-container {
         padding: 40px 32px;
         margin: 80px auto 60px;
@@ -1346,29 +1380,5 @@ footer p {
 
     .star-rating {
         font-size: 2rem;
-
-@media (max-width: 640px) {
-    .nav-links {
-        gap: 20px;
-    }
-
-    .nav-links a {
-        font-size: 0.75rem;
-    }
-
-    .stat {
-        padding: 36px 28px;
-    }
-
-    .stat-number {
-        font-size: 2.8rem;
-    }
-
-    .project-tags, .tag {
-        font-size: 0.75rem;
-    }
-
-    .info-card, .value-card {
-        padding: 44px 36px;
     }
 }
