@@ -15,6 +15,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#positions">Positions</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#reviews">Reviews</a></li>
       </ul>
     </nav>
 
@@ -508,6 +509,70 @@
       </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <h2 class="section-title">Community Reviews</h2>
+        
+        <!-- Leave a Review Form -->
+        <div class="review-form-container">
+          <h3 class="review-form-title">Leave a Review</h3>
+          <form id="reviewForm" class="review-form">
+            <div class="form-group">
+              <label for="reviewerName">Your Name</label>
+              <input type="text" id="reviewerName" required placeholder="Enter your name" />
+            </div>
+            
+            <div class="form-group">
+              <label for="reviewerPosition">Your Position/Server (Optional)</label>
+              <input type="text" id="reviewerPosition" placeholder="e.g., Admin at ServerName" />
+            </div>
+            
+            <div class="form-group">
+              <label>Rating</label>
+              <div class="star-rating" id="starRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <input type="hidden" id="ratingValue" value="0" />
+            </div>
+            
+            <div class="form-group">
+              <label for="reviewText">Your Review</label>
+              <textarea id="reviewText" required placeholder="Share your experience working with Caliber..." rows="5"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Review</button>
+          </form>
+        </div>
+
+        <!-- Reviews Display -->
+        <div class="reviews-list" id="reviewsList">
+          <!-- Reviews will be dynamically inserted here -->
+        </div>
+
+        <!-- Admin Panel Toggle -->
+        <div class="admin-toggle">
+          <button id="adminToggleBtn" class="admin-toggle-btn">Admin Panel</button>
+        </div>
+
+        <!-- Admin Panel (Hidden by default) -->
+        <div id="adminPanel" class="admin-panel" style="display: none;">
+          <h3>Admin Panel</h3>
+          <div class="admin-auth">
+            <input type="password" id="adminPassword" placeholder="Enter admin password" />
+            <button id="adminLoginBtn">Login</button>
+          </div>
+          <div id="adminContent" style="display: none;">
+            <p class="admin-info">Click the delete button on any review to remove it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -517,5 +582,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="reviews.js"></script>
   </body>
 </html>
