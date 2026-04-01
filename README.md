@@ -10,7 +10,7 @@ If you have any questions or concerns, you can reach me at discord or email via 
 
 Informational: 
 GMAIL: Caliberdev50@gmail.com
-Discord: x_caliber41
+DISCORD: x_caliber41
 
 Hope you guys have a great rest of your day or night! 
 Happy Holidays!! 🎉🎄✨
