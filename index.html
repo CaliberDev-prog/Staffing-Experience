@@ -1,588 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caliber's Staffing</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="nav">
-      <div class="nav-logo">CALIBER</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#positions">Positions</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Caliber (Dylan) — community manager, moderator, and developer with 3+ years of experience." />
+  <title>Caliber — Community Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Community Management</h1>
-      <p class="subtitle">Leader, Moderator, and Developer</p>
-      <div class="scroll-indicator"></div>
-    </section>
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">CALIBER</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#positions">Positions</a>
+        <a href="#skills">Skills</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#experience" onclick="closeMobile()">Experience</a>
+      <a href="#positions" onclick="closeMobile()">Positions</a>
+      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#approach" onclick="closeMobile()">Approach</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-text">
-            <h2>Meet Caliber!</h2>
-            <p>
-              Hello! I'm Caliber (Dylan), a 16-year-old community manager with
-              3+ years of experience. I started learning server operations in
-              2020 as a helper, gradually working my way through various
-              positions from lower staff to higher management roles. Each
-              position taught me something valuable about professionalism,
-              organization, and effective community leadership.
-            </p>
-            <p>
-              I'm passionate about helping communities grow while creating
-              positive experiences for both members and staff. I've learned to
-              stay calm and professional in challenging situations, and I
-              believe no position or rank should be used for discrimination.
-              Everyone deserves respect and kindness, regardless of their role.
-            </p>
-          </div>
-          <div class="about-stats">
-            <div class="stat">
-              <div class="stat-number">3+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">22+</div>
-              <div class="stat-label">Servers Managed</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">80+</div>
-              <div class="stat-label">Staff Trained</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">94K+</div>
-              <div class="stat-label">Largest Community</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">22-32</div>
-              <div class="stat-label">Hours Per Week</div>
-            </div>
-          </div>
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span id="hero-availability"></span>
+    </div>
+    <h1 class="hero-title">
+      <span id="hero-headline-1"></span><br />
+      <span id="hero-headline-2" class="accent"></span>
+    </h1>
+    <p class="hero-sub" id="hero-sub"></p>
+    <div class="hero-btns">
+      <a href="#experience" class="btn btn-primary">View Experience</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <!-- filled by JS from CONFIG -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-label">01 — About</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title" id="about-title"></h2>
+        <p id="about-body"></p>
+        <p id="about-body2" class="mt"></p>
+      </div>
+      <div class="about-aside">
+        <div class="aside-block">
+          <div class="aside-label">Availability</div>
+          <div class="aside-value" id="about-availability"></div>
+        </div>
+        <div class="aside-block">
+          <div class="aside-label">Timezone</div>
+          <div class="aside-value" id="about-timezone"></div>
+        </div>
+        <div class="aside-block">
+          <div class="aside-label">Discord</div>
+          <div class="aside-value accent" id="about-discord"></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section class="projects" id="experience">
-      <div class="container">
-        <h2 class="section-title">Experience & Information</h2>
-        <div class="project-list">
-          <!-- Moderation -->
-          <div class="project">
-            <div class="project-info">
-              <div class="project-number">Project | 01</div>
-              <h3>Moderation (Helper & Moderator)</h3>
-              <p class="project-description">
-                I began my staffing career as a helper, where I learned the
-                importance of professionalism and fairness. I always seek
-                solutions to issues without letting emotions drive decisions. I
-                de-escalate situations and find middle ground when handling
-                conflicts, regardless of my rank or the parties involved.
-              </p>
-              <div class="project-tags">
-                <span class="tag">General Support</span>
-                <span class="tag">Chat Moderation</span>
-                <span class="tag">Rule Enforcement</span>
-                <span class="tag">Community Engagement</span>
-              </div>
-            </div>
-            <div class="project-image">
-              <span class="placeholder-text">👥 MODERATION</span>
-            </div>
-          </div>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="section-label">02 — Experience</div>
+    <h2 class="section-title">What I do.</h2>
+    <div class="exp-grid" id="exp-grid"></div>
+  </section>
 
-          <!-- Management -->
-          <div class="project">
-            <div class="project-info">
-              <div class="project-number">Project | 02</div>
-              <h3>Management & Leadership</h3>
-              <p class="project-description">
-                As a Manager and Head Administrator, I focused on building
-                structure and accountability. I create staff handbooks, run
-                performance check-ins, and coordinate teams effectively. Good
-                leadership means holding everyone to the same standards while
-                helping staff grow through clear feedback and support.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Documentation</span>
-                <span class="tag">Staff Meetings</span>
-                <span class="tag">Task Coordination</span>
-                <span class="tag">Team Communication</span>
-              </div>
-            </div>
-            <div class="project-image">
-              <span class="placeholder-text">💼 LEADERSHIP</span>
-            </div>
-          </div>
+  <!-- POSITIONS -->
+  <section id="positions" class="section">
+    <div class="section-label">03 — Positions</div>
+    <h2 class="section-title">Where I've served.</h2>
+    <div class="positions-tabs">
+      <button class="pos-tab active" data-tab="current" onclick="switchTab('current',this)">
+        Current <span class="tab-count" id="count-current"></span>
+      </button>
+      <button class="pos-tab" data-tab="previous" onclick="switchTab('previous',this)">
+        Previous <span class="tab-count" id="count-previous"></span>
+      </button>
+    </div>
+    <div id="positions-grid" class="positions-grid"></div>
+  </section>
 
-          <!-- Development -->
-          <div class="project">
-            <div class="project-info">
-              <div class="project-number">Project | 03</div>
-              <div class="project-header-with-level">
-                <h3>Development & Technical Oversight</h3>
-                <span class="skill-level intermediate"
-                  >Intermediate & Learning</span
-                >
-              </div>
-              <p class="project-description">
-                I bridge technical teams and community management through plugin
-                testing, configuration, and system optimization. I'm proficient
-                with monitoring commands and evidence recording. My focus is
-                coordinating between developers and staff to ensure technical
-                implementations meet community needs.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Plugin Testing</span>
-                <span class="tag">Documentation</span>
-                <span class="tag">Team Coordination</span>
-                <span class="tag">System Optimization</span>
-              </div>
-            </div>
-            <div class="project-image">
-              <span class="placeholder-text">⚙️ DEVELOPMENT</span>
-            </div>
-          </div>
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="section-label">04 — Skills</div>
+    <h2 class="section-title">Core competencies.</h2>
+    <div class="skills-grid" id="skills-grid"></div>
+  </section>
 
-          <!-- Communication -->
-          <div class="project">
-            <div class="project-info">
-              <div class="project-number">Project | 04</div>
-              <h3>Communication & Writing</h3>
-              <p class="project-description">
-                Clear communication is essential in any team. I excel at
-                creating professional documents, public announcements, and
-                detailed reports while adapting my tone to fit the situation.
-                Whether explaining rules to new players, documenting evidence,
-                or coordinating with staff teams, I ensure messages are clear
-                and effective.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Professional Documents</span>
-                <span class="tag">Public Announcements</span>
-                <span class="tag">Meeting Reports</span>
-                <span class="tag">Tone Adaptation</span>
-              </div>
-            </div>
-            <div class="project-image">
-              <span class="placeholder-text">📝 COMMUNICATION</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- APPROACH -->
+  <section id="approach" class="section">
+    <div class="section-label">05 — Approach</div>
+    <h2 class="section-title">How I work.</h2>
+    <div class="approach-grid" id="approach-grid"></div>
+  </section>
 
-    <!-- Previous Positions Section -->
-    <section class="positions" id="positions">
-      <div class="container">
-        <h2 class="section-title">Previous Positions</h2>
-        <div class="positions-grid">
-          <div class="position-card resigned">
-            <div class="position-header">
-              <h3>NoMercy.rip</h3>
-              <span class="position-badge resigned-badge">resigned</span>
-            </div>
-            <div class="position-role">Community Manager</div>
-            <div class="position-members">148 Members</div>
-            <p class="position-description">
-              Managing development, staff teams, gameplay planning, and
-              community decisions. Launching December 27th.
-            </p>
-          </div>
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="section-label">06 — Contact</div>
+    <div class="contact-inner">
+      <h2 class="section-title" id="contact-title"></h2>
+      <p class="contact-sub" id="contact-sub"></p>
+      <div class="contact-cards" id="contact-cards"></div>
+    </div>
+  </section>
 
-          <div class="position-card resigned">
-            <div class="position-header">
-              <h3>Techbyte Hosting</h3>
-              <span class="position-badge current-badge">Resigned</span>
-            </div>
-            <div class="position-role">Media/Staff</div>
-            <div class="position-members">400 Members</div>
-            <p class="position-description">
-              Creating promotional videos, customer support, and ticket
-              management.
-            </p>
-          </div>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">CALIBER</span>
+      <span class="footer-copy" id="footer-copy"></span>
+    </div>
+  </footer>
 
-          <div class="position-card current irl">
-            <div class="position-header">
-              <h3>Dylan's Auto Detailing</h3>
-              <span class="position-badge current-badge">Current</span>
-            </div>
-            <div class="position-role">Owner/CEO</div>
-            <div class="position-members">100+ Clients</div>
-            <p class="position-description">
-              Handling customer interactions, scheduling, pricing, and
-              marketing.
-            </p>
-          </div>
-
-          <div class="position-card resigned">
-            <div class="position-header">
-              <h3>ShadySMP</h3>
-              <span class="position-badge resigned-badge">Resigned</span>
-            </div>
-            <div class="position-role">Admin/Supervisor</div>
-            <div class="position-members">400 Members</div>
-            <p class="position-description">
-              Overseeing staff team, resolving player conflicts, and server
-              organization.
-            </p>
-          </div>
-
-          <!-- ShatterMC -->
-          <div class="position-card">
-            <div class="position-header">
-              <h3>ShatterMC</h3>
-              <span class="position-badge shutdown-badge">Shut Down</span>
-            </div>
-            <div class="position-role">Owner</div>
-            <div class="position-members">270 Members</div>
-            <p class="position-description">
-              Server development, staff management, and community branding.
-            </p>
-          </div>
-
-          <!-- DuskMines -->
-          <div class="position-card">
-            <div class="position-header">
-              <h3>DuskMines</h3>
-              <span class="position-badge shutdown-badge">Shutdown</span>
-            </div>
-            <div class="position-role">Owner</div>
-            <div class="position-members">100 Members</div>
-            <p class="position-description">
-              Server creation, staff management, and community oversight.
-            </p>
-          </div>
-
-          <!-- DigCompany -->
-          <div class="position-card">
-            <div class="position-header">
-              <h3>DigCompany</h3>
-              <span class="position-badge shutdown-badge">Shutdown</span>
-            </div>
-            <div class="position-role">Admin</div>
-            <div class="position-members">300 Members</div>
-            <p class="position-description">
-              Ticket handling, chat moderation, and punishment management.
-            </p>
-          </div>
-
-          <!-- SMPFinder -->
-          <div class="position-card current">
-            <div class="position-header">
-              <h3>SMPFinder</h3>
-              <span class="position-badge resigned-badge">Current</span>
-            </div>
-            <div class="position-role">Moderator</div>
-            <div class="position-members">47,11 Members</div>
-            <p class="position-description">
-              Ticket management, chat moderation, and rule enforcement.
-            </p>
-          </div>
-
-          <!-- AndysoIam -->
-          <div class="position-card">
-            <div class="position-header">
-              <h3>AndysoIam</h3>
-              <span class="position-badge resigned-badge">Resigned</span>
-            </div>
-            <div class="position-role">Helper/Moderator</div>
-            <div class="position-members">94,000 Members</div>
-            <p class="position-description">
-              Member support, in-game moderation, and report tickets.
-            </p>
-          </div>
-
-          <!-- Berrry Host -->
-          <div class="position-card">
-            <div class="position-header">
-              <h3>Berrry Host</h3>
-              <span class="position-badge shutdown-badge">Shutdown</span>
-            </div>
-            <div class="position-role">Staff</div>
-            <div class="position-members">240 Members</div>
-            <p class="position-description">
-              Ticket handling and general support.
-            </p>
-          </div>
-
-          <!-- HyperKits -->
-          <div class="position-card">
-            <div class="position-header">
-              <h3>HyperKits</h3>
-              <span class="position-badge shutdown-badge">Shutdown</span>
-            </div>
-            <div class="position-role">Trial Developer / Jr. Admin</div>
-            <div class="position-members">650 Members</div>
-            <p class="position-description">
-              Basic development tasks, server setup, and player support.
-            </p>
-          </div>
-
-          <!-- HavenVault -->
-          <div class="position-card">
-            <div class="position-header">
-              <h3>HavenVault</h3>
-              <span class="position-badge shutdown-badge">Shutdown</span>
-            </div>
-            <div class="position-role">Owner</div>
-            <div class="position-members">300 Members</div>
-            <p class="position-description">
-              Server management, staff mentorship, and event coordination.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="extra-info" id="skills">
-      <div class="container">
-        <h2 class="section-title">Core Skills</h2>
-        <div class="info-grid">
-          <div class="info-card">
-            <div class="info-icon">🛡️</div>
-            <h3>Moderation Excellence</h3>
-            <ul>
-              <li>Chat safety and rule enforcement</li>
-              <li>Evidence-based decision making</li>
-              <li>Conflict de-escalation</li>
-              <li>Staff training and mentorship</li>
-              <li>Ticket and report handling</li>
-              <li>Anti-cheat log analysis</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">👑</div>
-            <h3>Leadership & Management</h3>
-            <ul>
-              <li>Staff handbook creation</li>
-              <li>Performance reviews and feedback</li>
-              <li>Task coordination</li>
-              <li>Meeting facilitation</li>
-              <li>Crisis management</li>
-              <li>Team development</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">💻</div>
-            <h3>Technical Skills</h3>
-            <ul>
-              <li>Plugin configuration and testing</li>
-              <li>System documentation</li>
-              <li>Backend optimization</li>
-              <li>Cross-team coordination</li>
-              <li>Evidence recording</li>
-              <li>Command proficiency</li>
-            </ul>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">✍️</div>
-            <h3>Communication & Soft Skills</h3>
-            <ul>
-              <li>Professional writing</li>
-              <li>Public announcements</li>
-              <li>Detailed reporting</li>
-              <li>Adaptive communication</li>
-              <li>Customer service</li>
-              <li>Time management</li>
-              <li>Fast learning</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Core Values Section -->
-        <div class="values-section">
-          <h2 class="section-title">My Approach</h2>
-          <div class="values-grid">
-            <div class="value-card">
-              <div class="value-icon">⚖️</div>
-              <h3>Fairness & Accountability</h3>
-              <p>
-                I enforce rules consistently for everyone. No one is above the
-                rules, including staff. I take accountability for my actions and
-                document everything transparently.
-              </p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">🧠</div>
-              <h3>Evidence-Based Decisions</h3>
-              <p>
-                I gather proof through screenshots, videos, and logs before
-                making decisions. Accuracy matters more than speed, but I still
-                act efficiently.
-              </p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">🎯</div>
-              <h3>Priority Management</h3>
-              <p>
-                I assess situations critically. Global issues get immediate
-                attention. I can handle multiple crises while staying calm and
-                organized.
-              </p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">🤝</div>
-              <h3>Professional Under Pressure</h3>
-              <p>
-                I maintain professionalism during conflicts, raids, or personal
-                attacks. Emotions don't drive my decisions—protecting the
-                community does.
-              </p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">📚</div>
-              <h3>Continuous Growth</h3>
-              <p>
-                I take feedback seriously and learn from mistakes. My goal is
-                always to improve and serve the community better.
-              </p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">💙</div>
-              <h3>Community First</h3>
-              <p>
-                I don't apply for status—I apply to help communities thrive. I
-                genuinely care about creating positive environments where
-                everyone feels safe and supported.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Personal Info -->
-        <div class="personal-info">
-          <h2 class="section-title">Additional Information</h2>
-          <div class="info-details">
-            <div class="detail-item">
-              <span class="detail-label">Location:</span>
-              <span class="detail-value">United States (EST Timezone)</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-label">Availability:</span>
-              <span class="detail-value">20-30 hours per week</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-label">Minecraft Username:</span>
-              <span class="detail-value">Lonleydog2431</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-label">Discord:</span>
-              <span class="detail-value">x_caliber41</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-label">Equipment:</span>
-              <span class="detail-value"
-                >Microphone, recording software, reliable internet</span
-              >
-            </div>
-            <div class="detail-item">
-              <span class="detail-label">Strengths:</span>
-              <span class="detail-value"
-                >Calm under pressure, effective communication, reliability, fast
-                learning</span
-              >
-            </div>
-            <div class="detail-item">
-              <span class="detail-label">Areas for Growth:</span>
-              <span class="detail-value"
-                >Delegating tasks, asking for help, balancing perfectionism with
-                efficiency</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews" id="reviews">
-      <div class="container">
-        <h2 class="section-title">Community Reviews</h2>
-        
-        <!-- Leave a Review Form -->
-        <div class="review-form-container">
-          <h3 class="review-form-title">Leave a Review</h3>
-          <form id="reviewForm" class="review-form">
-            <div class="form-group">
-              <label for="reviewerName">Your Name</label>
-              <input type="text" id="reviewerName" required placeholder="Enter your name" />
-            </div>
-            
-            <div class="form-group">
-              <label for="reviewerPosition">Your Position/Server (Optional)</label>
-              <input type="text" id="reviewerPosition" placeholder="e.g., Admin at ServerName" />
-            </div>
-            
-            <div class="form-group">
-              <label>Rating</label>
-              <div class="star-rating" id="starRating">
-                <span class="star" data-rating="1">★</span>
-                <span class="star" data-rating="2">★</span>
-                <span class="star" data-rating="3">★</span>
-                <span class="star" data-rating="4">★</span>
-                <span class="star" data-rating="5">★</span>
-              </div>
-              <input type="hidden" id="ratingValue" value="0" />
-            </div>
-            
-            <div class="form-group">
-              <label for="reviewText">Your Review</label>
-              <textarea id="reviewText" required placeholder="Share your experience working with Caliber..." rows="5"></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn">Submit Review</button>
-          </form>
-        </div>
-
-        <!-- Reviews Display -->
-        <div class="reviews-list" id="reviewsList">
-          <!-- Reviews will be dynamically inserted here -->
-        </div>
-
-        <!-- Admin Panel Toggle -->
-        <div class="admin-toggle">
-          <button id="adminToggleBtn" class="admin-toggle-btn">Admin Panel</button>
-        </div>
-
-        <!-- Admin Panel (Hidden by default) -->
-        <div id="adminPanel" class="admin-panel" style="display: none;">
-          <h3>Admin Panel</h3>
-          <div class="admin-auth">
-            <input type="password" id="adminPassword" placeholder="Enter admin password" />
-            <button id="adminLoginBtn">Login</button>
-          </div>
-          <div id="adminContent" style="display: none;">
-            <p class="admin-info">Click the delete button on any review to remove it.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p>
-          &copy; 2025 Caliber Community Management Portfolio. All rights
-          reserved.
-        </p>
-      </div>
-    </footer>
-
-    <script src="reviews.js"></script>
-  </body>
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
