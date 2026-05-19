@@ -93,7 +93,7 @@ const CONFIG = {
     },
     {
       name: "ShadySMP",
-      status: "resigned",
+      status: "current",
       role: "Admin / Supervisor",
       members: "400 Members",
       desc: "Overseeing staff team, resolving player conflicts, and server organization.",
